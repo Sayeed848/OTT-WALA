@@ -137,14 +137,14 @@ function Navbar() {
             >
               <img
                 className="card-img-top"
-                src="https://5.imimg.com/data5/ANDROID/Default/2025/10/553106372/AV/XA/JD/147723836/product-jpeg-500x500.jpg"
+                src="https://5.imimg.com/data5/ANDROID/Default/2025/10/553125972/JF/JK/QN/147723836/product-jpeg-500x500.jpeg"
                 alt="Netflix"
                 style={{ height: "240px", objectFit: "cover" }}
               />
 
               <div className="card-body text-center">
                 <h5 className="fw-bold">Netflix</h5>
-                <p className="text-warning fw-bold fs-5">$10 / Month</p>
+                <p className="text-warning fw-bold fs-5">$10 / Year</p>
 
                 <button
                   className="btn btn-danger w-100 rounded-pill fw-bold"
@@ -164,14 +164,14 @@ function Navbar() {
             >
               <img
                 className="card-img-top"
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5PtgBD1V3qy5orxH1drYf4XhJ4eoABUhWq8fDjgmtrg&s"
+                src="https://inc42.com/cdn-cgi/image/quality=90/https://asset.inc42.com/2019/03/Hotstar-VIP-F.jpg"
                 alt="Disney+ Hotstar"
                 style={{ height: "240px", objectFit: "cover" }}
               />
 
               <div className="card-body text-center">
                 <h5 className="fw-bold">Disney+ Hotstar</h5>
-                <p className="text-warning fw-bold fs-5">$10 / Month</p>
+                <p className="text-warning fw-bold fs-5">$10 / Year</p>
 
                 <button
                   className="btn btn-primary w-100 rounded-pill fw-bold"
@@ -198,7 +198,7 @@ function Navbar() {
 
               <div className="card-body text-center">
                 <h5 className="fw-bold">Amazon Prime</h5>
-                <p className="text-warning fw-bold fs-5">$10 / Month</p>
+                <p className="text-warning fw-bold fs-5">$10 / Year</p>
 
                 <button
                   className="btn btn-warning w-100 rounded-pill fw-bold"
@@ -218,14 +218,14 @@ function Navbar() {
             >
               <img
                 className="card-img-top"
-                src="https://yt3.googleusercontent.com/toCmhbURciZHcU3AZApwe1W8Xa_wA4XB5cLGvYgHuQOIEtaUIN74mjxBVOmPqnRef0hdN4jJOPE=s900-c-k-c0x00ffffff-no-rj"
+                src="https://premiumatcheap.in/wp-content/uploads/2024/02/zee5-official-logo-300x300-65bd3d74dcb99.webp"
                 alt="ZEE5"
                 style={{ height: "240px", objectFit: "cover" }}
               />
 
               <div className="card-body text-center">
                 <h5 className="fw-bold">ZEE5</h5>
-                <p className="text-warning fw-bold fs-5">$10 / Month</p>
+                <p className="text-warning fw-bold fs-5">$10 / Year</p>
 
                 <button
                   className="btn btn-success w-100 rounded-pill fw-bold"
@@ -252,7 +252,7 @@ function Navbar() {
 
               <div className="card-body text-center">
                 <h5 className="fw-bold">SonyLIV</h5>
-                <p className="text-warning fw-bold fs-5">$10 / Month</p>
+                <p className="text-warning fw-bold fs-5">$10 / Year</p>
 
                 <button
                   className="btn btn-dark w-100 rounded-pill fw-bold"
@@ -279,7 +279,7 @@ function Navbar() {
 
               <div className="card-body text-center">
                 <h5 className="fw-bold">MX Player</h5>
-                <p className="text-warning fw-bold fs-5">$10 / Month</p>
+                <p className="text-warning fw-bold fs-5">$10 / Year</p>
 
                 <button
                   className="btn btn-info w-100 rounded-pill fw-bold"
@@ -310,7 +310,7 @@ function Navbar() {
 
               <div className="card-body text-center">
                 <h5 className="fw-bold">Apple TV+</h5>
-                <p className="text-warning fw-bold fs-5">$10 / Month</p>
+                <p className="text-warning fw-bold fs-5">$10 / Year</p>
 
                 <button
                   className="btn btn-secondary w-100 rounded-pill fw-bold"
@@ -341,7 +341,7 @@ function Navbar() {
 
               <div className="card-body text-center">
                 <h5 className="fw-bold">JioCinema</h5>
-                <p className="text-warning fw-bold fs-5">$10 / Month</p>
+                <p className="text-warning fw-bold fs-5">$10 / Year</p>
 
                 <button
                   className="btn btn-primary w-100 rounded-pill fw-bold"
