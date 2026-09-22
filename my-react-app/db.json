@@ -1,0 +1,13 @@
+{
+  "payments": [
+    {
+      "cardHolder": "SAtedf",
+      "cardNumber": "878",
+      "expiry": "87",
+      "cvv": "5",
+      "upi": "",
+      "id": "c71e6D_8bwM"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
