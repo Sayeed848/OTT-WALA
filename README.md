@@ -37,7 +37,7 @@ my-react-app
 ├── src
 │   ├── component
 │   │   └── nav.jsx
-|   |   └── footer.jsx
+|   |   └── body.jsx
 |   |   └── footer.jsx        
 │   |
 |   |
