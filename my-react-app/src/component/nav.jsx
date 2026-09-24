@@ -44,6 +44,18 @@ function Navbar() {
                 About
               </NavLink>
             </li>
+ <li className="nav-item">
+              <NavLink
+                to="/dashboard"
+                className={({ isActive }) =>
+                  "nav-link" + (isActive ? " active text-warning fw-bold" : "")
+                }
+              >
+                Dashboard
+              </NavLink>
+            </li>
+
+
 
             <li className="nav-item">
               <NavLink

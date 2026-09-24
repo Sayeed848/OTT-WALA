@@ -1,55 +1,63 @@
-import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+
+import { useState } from "react";
+import { useNavigate } from "react-router";
+import Dashboard from "./Dashboard";
 
 function Login() {
-  const [credentials, setCredentials] = useState({ email: "", password: "" });
   const navigate = useNavigate();
 
-  const handleLogin = (e) => {
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+
+  function handleLogin(e) {
     e.preventDefault();
-    alert("Logged in successfully!");
-    navigate("/");
-  };
+
+    if (username === "sayeed" && password === "1234") {
+      let loginSuccess = true;
+
+      if (loginSuccess) {
+        navigate("/Dashboard");
+      }
+    } else {
+      alert("Invalid username or password");
+    }
+  }
 
   return (
-    <div className="container my-5">
-      <div className="row justify-content-center">
-        <div className="col-md-5">
-          <div className="card bg-dark text-white p-4 shadow-lg border-secondary rounded-4">
-            <h2 className="text-warning text-center fw-bold mb-4">Login to OTT WALA</h2>
-            <form onSubmit={handleLogin}>
-              <div className="mb-3">
-                <label className="form-label">Email Address</label>
-                <input
-                  type="email"
-                  className="form-control bg-secondary text-white border-0"
-                  placeholder="name@example.com"
-                  value={credentials.email}
-                  onChange={(e) => setCredentials({ ...credentials, email: e.target.value })}
-                  required
-                />
-              </div>
-              <div className="mb-3">
-                <label className="form-label">Password</label>
-                <input
-                  type="password"
-                  className="form-control bg-secondary text-white border-0"
-                  placeholder="••••••••"
-                  value={credentials.password}
-                  onChange={(e) => setCredentials({ ...credentials, password: e.target.value })}
-                  required
-                />
-              </div>
-              <button type="submit" className="btn btn-warning w-100 fw-bold mb-3">
-                Sign In
-              </button>
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
+    <div className="d-flex justify-content-center align-items-center">
+    <div>
+      <h1>Login</h1>
+
+      <form onSubmit={handleLogin}>
+        <input
+          type="text"
+          placeholder="Enter username"
+          value={username}
+          onChange={(e) => setUsername(e.target.value)}
+        />
+
+        <br />
+        <br />
+
+        <input
+          type="password"
+          placeholder="Enter password"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+        />
+
+        <br />
+        <br />
+
+        <button type="submit" className="btn btn-primary ms-2">
+          Login
+        </button>
+        <button type="submit" className="btn btn-warning ms-2">
+          New User
+        </button>
+      </form>
+    </div></div>
   );
 }
 
 export default Login;
-

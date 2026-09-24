@@ -8,6 +8,7 @@ import About from './pages/About'
 import Contact from './pages/Contact'
 import Login from './pages/Login'
 import NotFound from './pages/NotFound'
+import Dashboard from './pages/Dashboard'
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/dashboard" element={<Dashboard />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </main>
