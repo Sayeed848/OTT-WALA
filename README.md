@@ -37,10 +37,19 @@ my-react-app
 ├── src
 │   ├── component
 │   │   └── nav.jsx
-│   │
+|   |   └── body.jsx
+|   |   └── footer.jsx        
+│   |
+|   |
+│   └── About.jsx
+|   └── Home.jsx
 │   ├── Form.jsx
+|   └── Login.jsx
+|   └── NotFound.jsx
 │   ├── App.jsx
 │   └── main.jsx
+|
+|
 │
 ├── db.json
 ├── package.json
