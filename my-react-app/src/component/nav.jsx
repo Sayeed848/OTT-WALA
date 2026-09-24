@@ -1,363 +1,147 @@
-import React, { useState } from "react";
-import Form from "../Form";
+import React from "react";
+import { Link, NavLink } from "react-router-dom";
 
 function Navbar() {
-  const [showForm, setShowForm] = useState(false);
-
   return (
-    <>
-      <nav className="navbar navbar-expand-lg bg-body-tertiary">
-        <div className="container-fluid">
-          <a className="navbar-brand" href="#">
-            OTT WALA
-          </a>
+    <nav className="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm border-bottom border-secondary">
+      <div className="container-fluid">
+        <Link className="navbar-brand fw-bold text-warning fs-4" to="/">
+          OTT WALA
+        </Link>
 
-          <button
-            className="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNav"
-            aria-controls="navbarNav"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span className="navbar-toggler-icon"></span>
-          </button>
+        <button
+          className="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span className="navbar-toggler-icon"></span>
+        </button>
 
-          <div className="collapse navbar-collapse" id="navbarNav">
-            <ul className="navbar-nav">
-              <li className="nav-item">
-                <a className="nav-link active" href="#">
-                  Home
-                </a>
-              </li>
+        <div className="collapse navbar-collapse" id="navbarNav">
+          <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+            <li className="nav-item">
+              <NavLink
+                to="/"
+                className={({ isActive }) =>
+                  "nav-link" + (isActive ? " active text-warning fw-bold" : "")
+                }
+              >
+                Home
+              </NavLink>
+            </li>
 
-              <li className="nav-item">
-                <a className="nav-link" href="#">
-                  Features
-                </a>
-              </li>
+            <li className="nav-item">
+              <NavLink
+                to="/about"
+                className={({ isActive }) =>
+                  "nav-link" + (isActive ? " active text-warning fw-bold" : "")
+                }
+              >
+                About
+              </NavLink>
+            </li>
 
-              <li className="nav-item">
-                <a className="nav-link" href="#">
-                  Pricing
-                </a>
-              </li>
+            <li className="nav-item">
+              <NavLink
+                to="/contact"
+                className={({ isActive }) =>
+                  "nav-link" + (isActive ? " active text-warning fw-bold" : "")
+                }
+              >
+                Contact
+              </NavLink>
+            </li>
 
-              <li className="nav-item dropdown">
-                <a
-                  className="nav-link dropdown-toggle"
-                  href="#"
-                  role="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  OTT
-                </a>
+            <li className="nav-item dropdown">
+              <a
+                className="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                OTT Platforms
+              </a>
 
-                <ul className="dropdown-menu">
-                  <li>
-                    <a className="dropdown-item" href="#">
-                      Netflix
-                    </a>
-                  </li>
-                  <li>
-                    <a className="dropdown-item" href="#">
-                      Amazon Prime
-                    </a>
-                  </li>
-                  <li>
-                    <a className="dropdown-item" href="#">
-                      Disney+ Hotstar
-                    </a>
-                  </li>
-                  <li>
-                    <a className="dropdown-item" href="#">
-                      JioHotstar
-                    </a>
-                  </li>
-                  <li>
-                    <a className="dropdown-item" href="#">
-                      SonyLIV
-                    </a>
-                  </li>
-                  <li>
-                    <a className="dropdown-item" href="#">
-                      ZEE5
-                    </a>
-                  </li>
-                  <li>
-                    <a className="dropdown-item" href="#">
-                      JioCinema
-                    </a>
-                  </li>
-                  <li>
-                    <a className="dropdown-item" href="#">
-                      MX Player
-                    </a>
-                  </li>
-                  <li>
-                    <a className="dropdown-item" href="#">
-                      Lionsgate Play
-                    </a>
-                  </li>
-                  <li>
-                    <a className="dropdown-item" href="#">
-                      Apple TV+
-                    </a>
-                  </li>
-                </ul>
-              </li>
-            </ul>
+              <ul className="dropdown-menu dropdown-menu-dark">
+                <li>
+                  <Link className="dropdown-item" to="/">
+                    Netflix
+                  </Link>
+                </li>
+                <li>
+                  <Link className="dropdown-item" to="/">
+                    Amazon Prime
+                  </Link>
+                </li>
+                <li>
+                  <Link className="dropdown-item" to="/">
+                    Disney+ Hotstar
+                  </Link>
+                </li>
+                <li>
+                  <Link className="dropdown-item" to="/">
+                    JioHotstar
+                  </Link>
+                </li>
+                <li>
+                  <Link className="dropdown-item" to="/">
+                    SonyLIV
+                  </Link>
+                </li>
+                <li>
+                  <Link className="dropdown-item" to="/">
+                    ZEE5
+                  </Link>
+                </li>
+                <li>
+                  <Link className="dropdown-item" to="/">
+                    JioCinema
+                  </Link>
+                </li>
+                <li>
+                  <Link className="dropdown-item" to="/">
+                    MX Player
+                  </Link>
+                </li>
+                <li>
+                  <Link className="dropdown-item" to="/">
+                    Lionsgate Play
+                  </Link>
+                </li>
+                <li>
+                  <Link className="dropdown-item" to="/">
+                    Apple TV+
+                  </Link>
+                </li>
+              </ul>
+            </li>
+          </ul>
 
-            <form className="d-flex ms-auto" role="search">
+          <div className="d-flex align-items-center gap-2">
+            <form className="d-flex me-2" role="search" onSubmit={(e) => e.preventDefault()}>
               <input
-                className="form-control me-2"
+                className="form-control me-2 bg-secondary text-white border-0 placeholder-white"
                 type="search"
-                placeholder="Search"
+                placeholder="Search OTT..."
                 aria-label="Search"
               />
-
-              <button className="btn btn-outline-success" type="submit">
+              <button className="btn btn-outline-warning" type="submit">
                 Search
               </button>
             </form>
+
+            <NavLink to="/login" className="btn btn-warning fw-bold px-3">
+              Login
+            </NavLink>
           </div>
-        </div>
-      </nav>
-
-      <div className="container mt-4">
-        <div className="row justify-content-center g-4">
-
-          {/* Netflix */}
-          <div className="col-12 col-md-6 col-lg-3">
-            <div
-              className="card shadow border-0 rounded-4 overflow-hidden"
-              style={{ height: "400px" }}
-            >
-              <img
-                className="card-img-top"
-                src="https://5.imimg.com/data5/ANDROID/Default/2025/10/553125972/JF/JK/QN/147723836/product-jpeg-500x500.jpeg"
-                alt="Netflix"
-                style={{ height: "240px", objectFit: "cover" }}
-              />
-
-              <div className="card-body text-center">
-                <h5 className="fw-bold">Netflix</h5>
-                <p className="text-warning fw-bold fs-5">$10 / Year</p>
-
-                <button
-                  className="btn btn-danger w-100 rounded-pill fw-bold"
-                  onClick={() => setShowForm(true)}
-                >
-                  BUY NOW
-                </button>
-              </div>
-            </div>
-          </div>
-
-          {/* Disney+ Hotstar */}
-          <div className="col-12 col-md-6 col-lg-3">
-            <div
-              className="card shadow border-0 rounded-4 overflow-hidden"
-              style={{ height: "400px" }}
-            >
-              <img
-                className="card-img-top"
-                src="https://inc42.com/cdn-cgi/image/quality=90/https://asset.inc42.com/2019/03/Hotstar-VIP-F.jpg"
-                alt="Disney+ Hotstar"
-                style={{ height: "240px", objectFit: "cover" }}
-              />
-
-              <div className="card-body text-center">
-                <h5 className="fw-bold">Disney+ Hotstar</h5>
-                <p className="text-warning fw-bold fs-5">$10 / Year</p>
-
-                <button
-                  className="btn btn-primary w-100 rounded-pill fw-bold"
-                  onClick={() => setShowForm(true)}
-                >
-                  BUY NOW
-                </button>
-              </div>
-            </div>
-          </div>
-
-          {/* Amazon Prime */}
-          <div className="col-12 col-md-6 col-lg-3">
-            <div
-              className="card shadow border-0 rounded-4 overflow-hidden"
-              style={{ height: "400px" }}
-            >
-              <img
-                className="card-img-top"
-                src="https://www.latestmodapks.com/wp-content/uploads/2022/04/amazon_video_light_on_dark.png"
-                alt="Amazon Prime"
-                style={{ height: "240px", objectFit: "cover" }}
-              />
-
-              <div className="card-body text-center">
-                <h5 className="fw-bold">Amazon Prime</h5>
-                <p className="text-warning fw-bold fs-5">$10 / Year</p>
-
-                <button
-                  className="btn btn-warning w-100 rounded-pill fw-bold"
-                  onClick={() => setShowForm(true)}
-                >
-                  BUY NOW
-                </button>
-              </div>
-            </div>
-          </div>
-
-          {/* ZEE5 */}
-          <div className="col-12 col-md-6 col-lg-3">
-            <div
-              className="card shadow border-0 rounded-4 overflow-hidden"
-              style={{ height: "400px" }}
-            >
-              <img
-                className="card-img-top"
-                src="https://premiumatcheap.in/wp-content/uploads/2024/02/zee5-official-logo-300x300-65bd3d74dcb99.webp"
-                alt="ZEE5"
-                style={{ height: "240px", objectFit: "cover" }}
-              />
-
-              <div className="card-body text-center">
-                <h5 className="fw-bold">ZEE5</h5>
-                <p className="text-warning fw-bold fs-5">$10 / Year</p>
-
-                <button
-                  className="btn btn-success w-100 rounded-pill fw-bold"
-                  onClick={() => setShowForm(true)}
-                >
-                  BUY NOW
-                </button>
-              </div>
-            </div>
-          </div>
-
-          {/* SonyLIV */}
-          <div className="col-12 col-md-6 col-lg-3">
-            <div
-              className="card shadow border-0 rounded-4 overflow-hidden"
-              style={{ height: "400px" }}
-            >
-              <img
-                className="card-img-top"
-                src="https://ottking.in/wp-content/uploads/2022/12/sony-logo-scaled.jpg"
-                alt="SonyLIV"
-                style={{ height: "240px", objectFit: "cover" }}
-              />
-
-              <div className="card-body text-center">
-                <h5 className="fw-bold">SonyLIV</h5>
-                <p className="text-warning fw-bold fs-5">$10 / Year</p>
-
-                <button
-                  className="btn btn-dark w-100 rounded-pill fw-bold"
-                  onClick={() => setShowForm(true)}
-                >
-                  BUY NOW
-                </button>
-              </div>
-            </div>
-          </div>
-
-          {/* MX Player */}
-          <div className="col-12 col-md-6 col-lg-3">
-            <div
-              className="card shadow border-0 rounded-4 overflow-hidden"
-              style={{ height: "400px" }}
-            >
-              <img
-                className="card-img-top"
-                src="https://premiumatcheap.in/wp-content/uploads/2024/02/mx-player-gold-hd-video-player-my24hrshop-65bd1c0f05b81-1200x1200.webp"
-                alt="MX Player"
-                style={{ height: "240px", objectFit: "cover" }}
-              />
-
-              <div className="card-body text-center">
-                <h5 className="fw-bold">MX Player</h5>
-                <p className="text-warning fw-bold fs-5">$10 / Year</p>
-
-                <button
-                  className="btn btn-info w-100 rounded-pill fw-bold"
-                  onClick={() => setShowForm(true)}
-                >
-                  BUY NOW
-                </button>
-              </div>
-            </div>
-          </div>
-
-          {/* Apple TV+ */}
-          <div className="col-12 col-md-6 col-lg-3">
-            <div
-              className="card shadow border-0 rounded-4 overflow-hidden"
-              style={{ height: "400px" }}
-            >
-              <img
-                className="card-img-top"
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQAbIKPY_klZsz0dPlIf9LdL104-_WRFQpGY8NdAUBGP9CWMzHot0St8Bc&s=10"
-                alt="Apple TV+"
-                style={{
-                  height: "240px",
-                  width: "100%",
-                  objectFit: "cover",
-                }}
-              />
-
-              <div className="card-body text-center">
-                <h5 className="fw-bold">Apple TV+</h5>
-                <p className="text-warning fw-bold fs-5">$10 / Year</p>
-
-                <button
-                  className="btn btn-secondary w-100 rounded-pill fw-bold"
-                  onClick={() => setShowForm(true)}
-                >
-                  BUY NOW
-                </button>
-              </div>
-            </div>
-          </div>
-
-          {/* JioCinema */}
-          <div className="col-12 col-md-6 col-lg-3">
-            <div
-              className="card shadow border-0 rounded-4 overflow-hidden"
-              style={{ height: "400px" }}
-            >
-              <img
-                className="card-img-top"
-                src="https://pbs.twimg.com/media/GMAkJYwbEAEE2aW.jpg"
-                alt="JioCinema"
-                style={{
-                  height: "240px",
-                  width: "100%",
-                  objectFit: "cover",
-                }}
-              />
-
-              <div className="card-body text-center">
-                <h5 className="fw-bold">JioCinema</h5>
-                <p className="text-warning fw-bold fs-5">$10 / Year</p>
-
-                <button
-                  className="btn btn-primary w-100 rounded-pill fw-bold"
-                  onClick={() => setShowForm(true)}
-                >
-                  BUY NOW
-                </button>
-              </div>
-            </div>
-          </div>
-
         </div>
       </div>
-
-      {showForm && <Form setShowForm={setShowForm} />}
-    </>
+    </nav>
   );
 }
 

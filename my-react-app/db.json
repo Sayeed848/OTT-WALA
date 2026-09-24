@@ -7,6 +7,30 @@
       "cvv": "5",
       "upi": "",
       "id": "c71e6D_8bwM"
+    },
+    {
+      "cardHolder": "Parsant ",
+      "cardNumber": "6456415895",
+      "expiry": "24/78",
+      "cvv": "4545",
+      "upi": "parstanbsyf@",
+      "id": "ZBN6W5rOQpc"
+    },
+    {
+      "cardHolder": "Sayeed Alam",
+      "cardNumber": "18464867",
+      "expiry": "6414564",
+      "cvv": "9865",
+      "upi": "syd@kjnzdc",
+      "id": "q5w5eF7IK9U"
+    },
+    {
+      "cardHolder": "ads",
+      "cardNumber": "sadsass",
+      "expiry": "sdas",
+      "cvv": "sdd",
+      "upi": "adsads",
+      "id": "sARcmI2JZvY"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"
